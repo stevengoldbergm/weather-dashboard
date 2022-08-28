@@ -10,23 +10,23 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <title>Weather Dashboard</title>
 </head>
-<body>
+<body class="is-max">
     <!-- Create a header to hold the title -->
-    <section class="hero is-info">
+    <section class="hero is-info is-max">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-1">
-            World Weather Dashboard
+          <h1 class="title is-1 has-text-centered-mobile">
+            US Weather Dashboard
           </h1>
-          <h2 class="subtitle">
-            Find the weather forecast for cities all over the world!
+          <h2 class="subtitle has-text-centered-mobile">
+            Find the weather forecast for cities all over the United States!
           </h2>
         </div>
       </div>
     </section>
 
     <!-- Adding a nice aesthetic border -->
-    <header class="has-background-info-dark">
+    <header class="has-background-white">
         <h1 class="title has-text-white has-text-centered p-2"></h1>
     </header>
 
@@ -37,153 +37,148 @@
     <section class="p-2">
         <div class="columns">
             <div class="column is-3 has-text-left has-text-centered-mobile p-4">
-                <h5 class="title is-5 pb-0">Search for a City:</h5>
-                <input class="input is-rounded" type="text" name="enter-city" id="search" placeholder="Your City" >
-                <section class="mt-4">
-                    <a class="button has-background-info has-text-white" type="button" for="search">
-                        Search Now!
-                    </a>
-                </section>
+                <!-- <form> -->
+                    <form id="search-field" autocomplete = off>
+                        <h5 class="label is-5 pl-1">Search City or Zip Code:</h5>
+                        <input class="input is-rounded" type="text" id="search-city" placeholder="Your City" >
+                    </form>
+                    <section class="control mt-4">
+                        <a class="button is-widescreen is-roundeds is-max has-background-info has-text-white" type="submit" >
+                            Search Now!
+                        </a>
+                    </section>
+                <!-- </form> -->
                 <hr class="has-background-grey-light">
-                <a class="button has-background-info-light has-text-grey mt-1" type="button" for="search">
+                <a class="button is-roundeds is-max has-background-info-light has-text-grey mb-2" type="button" for="search">
                     Result Template
                 </a>
-                <a class="button has-background-info-light has-text-grey mt-1" type="button" for="search">
-                    Result Template
+                <br>
+                <a class="button is-roundeds is-max has-background-danger-dark has-text-grey-lighter mt-1" type="button" for="search">
+                    Clear History
                 </a>
             </div>
 
-            <div class="column is-9 has-text-left is-bordered">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p class="is-6">Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
+            <div class="column is-9 has-text-left pt-1 is-hidden">
+                <section>
+                    <div class="card not-rounded has-background-info">
+                        <div class="card-content pt-2">
+                            <div class="media">
+                                <div id="today" class="media-content is-relative">
+                                    <p class="title align is-1 has-text-white">New York </p>
+                                    <p class="subtitle is-6 has-text-white pb-0">11-11-22 </p>
+                                    <img class="is-absolute" src="http://openweathermap.org/img/wn/10d@2x.png">
+                                    <hr class="has-background-grey-lighter">
+                                    <p class="is-5 has-text-white">Temp: 86°F</p>
+                                    <p class="is-5 has-text-white">Wind:</p>
+                                    <p class="is-5 has-text-white">Humidity:</p>
+                                    <p class="is-5 has-text-white">UV Index:</p>
+                                </div>
+                            </div> 
                         </div>
                     </div>
-                </div>
+                </section>
+
+                <!-- Add 5-day Forecast Banner -->
+                <section class="is-hidden">
+                    <h6 class="column is-12 is-6 title has-background-info-dark has-text-white is-rounded">5 Day Forecast</h6>
+                </section>
+
+                <!-- Add 5-day Forecast Cards-->
+                <section class="columns is-hidden">
+                    <!-- add 'is-flex is-flex-wrap-wrap' -->
+                    <div id="five-day" class="columns column is-12 pl-5 pt-5 pb-5 pr-0"> 
+
+                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                            <div class="card-content p-0">
+                                <div class="media">
+                                    <div id="forecast-1" class="media-content is-relative">
+                                        <p class="title is-5">Mon</p>
+                                        <p class="subtitle is-6">11/11/22</p>
+                                        <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
+                                        <hr class="mt-0 has-background-grey is-hidden-mobile mb-3 pb-0">
+                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Wind:</p>
+                                        <p class="is-6">Humidity:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                            <div class="card-content p-0">
+                                <div class="media">
+                                    <div id="forecast-2" class="media-content is-relative">
+                                        <p class="title is-5">Tue</p>
+                                        <p class="subtitle is-6">11/11/22</p>
+                                        <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
+                                        <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
+                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Wind:</p>
+                                        <p class="is-6">Humidity:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                            <div class="card-content p-0">
+                                <div class="media">
+                                    <div id="forecast-3" class="media-content is-relative">
+                                        <p class="title is-5 md-0 pd-0">Wed</p>
+                                        <p class="subtitle is-6">11/11/22</p>                                        
+                                        <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
+                                        <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
+                                        <p>Temp: 86°F</p>
+                                        <p class="is-6">Wind:</p>
+                                        <p class="is-6">Humidity:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                            <div class="card-content p-0">
+                                <div class="media">
+                                    <div id="forecast-4" class="media-content is-relative">
+                                        <p class="title is-5 md-0 pd-0">Thu</p>
+                                        <p class="subtitle is-6">11/11/22</p>
+                                        <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
+                                        <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
+                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Wind:</p>
+                                        <p class="is-6">Humidity:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                            <div class="card-content p-0">
+                                <div class="media">
+                                    <div id="forecast-5" class="media-content is-relative">
+                                        <p class="title is-5 md-0 pd-0">Fri</p>
+                                        <p class="subtitle is-6">11/11/22</p>                                        
+                                        <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
+                                        <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
+                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Wind:</p>
+                                        <p class="is-6">Humidity:</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                     </div>   
+                </section>
+
             </div>
         </div>
     </section>
-
-    <section class="mb-2">
-        <div class="columns">
-            <section class="title column is-3 o"></section>
-            <h6 class="column is-8 is-6 title has-background-info has-text-white ml-6 pr-6 is-rounded">5 Day Forecasts</h6>
-        </div>
-    </section>
-
-    <section class="p-2 ">
-        <div class="columns ">
-            <div class="column is-3 has-text-left has-text-centered-mobile p-4 bt">
-                <!-- <section class="mt-3">
-                    <a class="button has-background-info-light has-text-grey" type="button" for="search">
-                        Result Template
-                    </a>
-                </section> -->
-            </div>
-
-            <div class="columns column is-9 pl-5"> 
-                <div class="column is-one-fifth is-one-third-mobile card mr-1">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-5 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p class="is-6">Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" column is-one-fifth is-one-third-mobile card mr-1">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-5 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p class="is-6">Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" column is-one-fifth card mr-1">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-5 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p>Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" column is-one-fifth card mr-1">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-5 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p class="is-6">Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" column is-one-fifth card mr-1">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-5 md-0 pd-0">11/11/22</p>
-                                <hr class="has-background-grey-lighter">
-                                <p class="is-6">Temp: 86°F</p>
-                                <p class="is-6">Wind:</p>
-                                <p class="is-6">Humidity:</p>
-                                <p class="is-6">UV Index:</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-    </section>
-
-
-    
-
-
-    
-    
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- <script src="./assets/js/test.js"></script> -->
 </body>
 </html>
