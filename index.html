@@ -38,20 +38,17 @@
         <div class="columns">
             <div class="column is-3 has-text-left has-text-centered-mobile p-4">
                 <!-- <form> -->
-                    <form id="search-field" autocomplete = off>
-                        <h5 class="label is-5 pl-1">Search City or Zip Code:</h5>
-                        <input class="input is-rounded" type="text" id="search-city" placeholder="Your City" >
-                    </form>
-                    <section class="control mt-4">
-                        <a class="button is-widescreen is-roundeds is-max has-background-info has-text-white" type="submit" >
-                            Search Now!
-                        </a>
-                    </section>
+                <form id="search-field" autocomplete = off>
+                    <h5 class="label is-5 pl-1">Search City or Zip Code:</h5>
+                    <input class="input is-rounded" type="text" id="search-city" placeholder="Your City" >
+                </form>
+                <section class="control mt-4">
+                    <a class="button btn-srch is-widescreen is-roundeds is-max has-background-info has-text-white" type="submit" >
+                        Search Now!
+                    </a>
+                </section>
                 <!-- </form> -->
-                <hr class="has-background-grey-light">
-                <a class="button is-roundeds is-max has-background-info-light has-text-grey mb-2" type="button" for="search">
-                    Result Template
-                </a>
+                <hr id="history" class="has-background-grey-light">
                 <br>
                 <a class="button is-roundeds is-max has-background-danger-dark has-text-grey-lighter mt-1" type="button" for="search">
                     Clear History
@@ -64,14 +61,14 @@
                         <div class="card-content pt-2">
                             <div class="media">
                                 <div id="today" class="media-content is-relative">
-                                    <p class="title align is-1 has-text-white">New York </p>
-                                    <p class="subtitle is-6 has-text-white pb-0">11-11-22 </p>
+                                    <p class="title align is-1 has-text-white">cityName </p>
+                                    <p class="subtitle is-6 has-text-white pb-0">00/00/00 </p>
                                     <img class="is-absolute" src="http://openweathermap.org/img/wn/10d@2x.png">
                                     <hr class="has-background-grey-lighter">
-                                    <p class="is-5 has-text-white">Temp: 86°F</p>
+                                    <p class="is-5 has-text-white">Temp:</p>
                                     <p class="is-5 has-text-white">Wind:</p>
                                     <p class="is-5 has-text-white">Humidity:</p>
-                                    <p class="is-5 has-text-white">UV Index:</p>
+                                    <p class="button is-small has-text-weight-bold is-rounded is-5 has-text-white mt-1 mr-1">UV Index:</p>
                                 </div>
                             </div> 
                         </div>
@@ -93,10 +90,10 @@
                                 <div class="media">
                                     <div id="forecast-1" class="media-content is-relative">
                                         <p class="title is-5">Mon</p>
-                                        <p class="subtitle is-6">11/11/22</p>
+                                        <p class="subtitle is-6">00/00/00</p>
                                         <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
                                         <hr class="mt-0 has-background-grey is-hidden-mobile mb-3 pb-0">
-                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Temp:</p>
                                         <p class="is-6">Wind:</p>
                                         <p class="is-6">Humidity:</p>
                                     </div>
@@ -109,10 +106,10 @@
                                 <div class="media">
                                     <div id="forecast-2" class="media-content is-relative">
                                         <p class="title is-5">Tue</p>
-                                        <p class="subtitle is-6">11/11/22</p>
+                                        <p class="subtitle is-6">00/00/00</p>
                                         <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
                                         <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
-                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Temp:</p>
                                         <p class="is-6">Wind:</p>
                                         <p class="is-6">Humidity:</p>
                                     </div>
@@ -125,10 +122,10 @@
                                 <div class="media">
                                     <div id="forecast-3" class="media-content is-relative">
                                         <p class="title is-5 md-0 pd-0">Wed</p>
-                                        <p class="subtitle is-6">11/11/22</p>                                        
+                                        <p class="subtitle is-6">00/00/00</p>                                   
                                         <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
                                         <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
-                                        <p>Temp: 86°F</p>
+                                        <p class="is-6">Temp:</p>
                                         <p class="is-6">Wind:</p>
                                         <p class="is-6">Humidity:</p>
                                     </div>
@@ -141,10 +138,10 @@
                                 <div class="media">
                                     <div id="forecast-4" class="media-content is-relative">
                                         <p class="title is-5 md-0 pd-0">Thu</p>
-                                        <p class="subtitle is-6">11/11/22</p>
+                                        <p class="subtitle is-6">00/00/00</p>
                                         <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
                                         <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
-                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Temp:</p>
                                         <p class="is-6">Wind:</p>
                                         <p class="is-6">Humidity:</p>
                                     </div>
@@ -157,10 +154,10 @@
                                 <div class="media">
                                     <div id="forecast-5" class="media-content is-relative">
                                         <p class="title is-5 md-0 pd-0">Fri</p>
-                                        <p class="subtitle is-6">11/11/22</p>                                        
+                                        <p class="subtitle is-6">00/00/00</p>                                        
                                         <img class='mb-0 is-absolute-small' src="http://openweathermap.org/img/wn/10d.png">
                                         <hr class="has-background-grey is-hidden-mobile mb-3 pb-0">
-                                        <p class="is-6">Temp: 86°F</p>
+                                        <p class="is-6">Temp:</p>
                                         <p class="is-6">Wind:</p>
                                         <p class="is-6">Humidity:</p>
                                     </div>

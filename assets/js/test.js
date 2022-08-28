@@ -78,11 +78,11 @@ console.log(weatherApi)
     // 3. Set values to the 5-day forecast cards // DONE
     // 3.1 Hide search fields until script runs // DONE
 
-    // 4. Write script to create History buttons
-    // 5. Write script to have buttons search using their values
-    // 6. Have button values save to localStorage
+    // 4. Write script to create History buttons // DONE
+    // 5. Write script to have buttons search using their values // DONE
+    // 6. Have button values save to localStorage // DONE
+    // 8. Write script to clear local memory // DONE
+    // 9. Figure out how to change the style of the background for UVI: //DONE
+    
     // 7. On start-up, use localStorage to generate buttons
-    // 8. Write script to clear local memory
-    // 9. Figure out how to change the style of the background for UVI: 
-        //WHEN I view the UV index THEN I am presented with a color that indicates whether the conditions are favorable, 
-    // Create README
+    // 10. Create README
