@@ -22,9 +22,12 @@ N/A
 
 ## Usage
 
-See the published site: [here](https://stevengoldbergm.github.io/daily-planner/)
-- To use the app, simply click inside your desired text entry field, write down your desired task, and tap on the floppy disc to save your data. 
-- If you wish to reset the scheduler, click the "Clear Schedule" button to remove all saved data from your device.
+See the published site: [here](https://stevengoldbergm.github.io/weather-dashboard/)
+- To use the app, simply click into the search field and enter the location of your desired forecast. 
+    - Both city name and zip code will provide results. 
+    - If your city name is not unique, you can also enter the state ID to narrow your search (e.g. Portland, ME or Portland, OR)
+- You can revisit any location that you've already searched by clicking on the automatically generated search history button.
+- If you wish to reset the dashboard, click the "Clear History" button to remove all saved data from your device.
 
 ## License
 N/A
