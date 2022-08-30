@@ -12,35 +12,34 @@
 </head>
 <body class="is-max">
     <!-- Create a header to hold the title -->
-    <section class="hero is-info is-max">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1 has-text-centered-mobile">
-            US Weather Dashboard
-          </h1>
-          <h2 class="subtitle has-text-centered-mobile">
-            Find the weather forecast for cities all over the United States!
-          </h2>
-        </div>
-      </div>
-    </section>
+    <header class="hero is-info is-max">
+        <section class="hero-body">
+            <section class="container">
+                <h1 class="title is-1 has-text-centered-mobile">
+                    US Weather Dashboard
+                </h1>
+                <h2 class="subtitle has-text-centered-mobile">
+                    Find the weather forecast for cities all over the United States!
+                </h2>
+        </section>
+    </header>
 
     <!-- Adding a nice aesthetic border -->
-    <header class="has-background-white">
+    <section class="has-background-white">
         <h1 class="title has-text-white has-text-centered p-2"></h1>
-    </header>
+    </section>
 
     <!-- Create two columns, one smaller one for search entry on the left, and another bigger one to display results on the right -->
 
     <!-- Column 1 - Change size to full screen when screen is small -->
 
     <section class="p-2">
-        <div class="columns">
-            <div class="column is-3 has-text-left has-text-centered-mobile p-4">
+        <main class="columns">
+            <aside class="column is-3 has-text-left has-text-centered-mobile p-4">
                 <!-- <form> -->
                 <form id="search-field" autocomplete = off>
                     <h5 class="label is-5 pl-1">Search City or Zip Code:</h5>
-                    <input class="input is-rounded" type="text" id="search-city" placeholder="Your City" >
+                    <input class="input is-rounded" type="text" id="search-city" placeholder="Your City">
                 </form>
                 <section class="control mt-4">
                     <a class="button btn-srch is-widescreen is-roundeds is-max has-background-info has-text-white" type="submit" >
@@ -48,15 +47,16 @@
                     </a>
                 </section>
                 <!-- </form> -->
+
                 <hr id="history" class="has-background-grey-light">
                 <br>
                 <a class="button is-roundeds is-max has-background-danger-dark has-text-grey-lighter mt-1" type="button" for="search">
                     Clear History
                 </a>
-            </div>
+            </aside>
 
-            <div class="column is-9 has-text-left pt-1 is-hidden">
-                <section>
+            <section class="column is-9 has-text-left pt-1 is-hidden">
+                <article>
                     <div class="card not-rounded has-background-info">
                         <div class="card-content pt-2">
                             <div class="media">
@@ -73,7 +73,7 @@
                             </div> 
                         </div>
                     </div>
-                </section>
+                </article>
 
                 <!-- Add 5-day Forecast Banner -->
                 <section class="is-hidden">
@@ -82,10 +82,10 @@
 
                 <!-- Add 5-day Forecast Cards-->
                 <section class="columns is-hidden">
-                    <!-- add 'is-flex is-flex-wrap-wrap' -->
-                    <div id="five-day" class="columns column is-12 pl-5 pt-5 pb-5 pr-0"> 
+                    <!-- test 'is-flex is-flex-wrap-wrap' -->
+                    <article id="five-day" class="columns column is-12 pl-5 pt-5 pb-5 pr-0"> 
 
-                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                        <section class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
                             <div class="card-content p-0">
                                 <div class="media">
                                     <div id="forecast-1" class="media-content is-relative">
@@ -99,9 +99,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
         
-                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                        <section class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
                             <div class="card-content p-0">
                                 <div class="media">
                                     <div id="forecast-2" class="media-content is-relative">
@@ -115,9 +115,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
         
-                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                        <section class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
                             <div class="card-content p-0">
                                 <div class="media">
                                     <div id="forecast-3" class="media-content is-relative">
@@ -131,9 +131,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
         
-                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                        <section class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
                             <div class="card-content p-0">
                                 <div class="media">
                                     <div id="forecast-4" class="media-content is-relative">
@@ -147,9 +147,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </section>
         
-                        <div class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
+                        <section class="column is-one-fifth card is-four-fifths-mobile is-offset-1-mobile lighter-blue mb-3 border-on">
                             <div class="card-content p-0">
                                 <div class="media">
                                     <div id="forecast-5" class="media-content is-relative">
@@ -163,13 +163,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                     </div>   
+                        </section>
+                    </article>   
                 </section>
-
-            </div>
-        </div>
+            </section>
+        </main>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

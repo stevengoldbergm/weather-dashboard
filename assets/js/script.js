@@ -160,8 +160,6 @@ function fetchWeather (event) {
                         } else {
                             todayChildEl[7].classList.add("uv-extr")
                         }
-
-                        // todayChildEl[7].classList.add("uv-low")
                     })        
         });
 
@@ -227,8 +225,6 @@ function fetchWeather (event) {
             forecastChildEl[4].textContent = "Temp: " + Math.floor(temp) + "°F";
             forecastChildEl[5].textContent = "Wind: " + Math.floor(wind) + "mph";
             forecastChildEl[6].textContent = "Humidity: " + humidity + "%";
-
-    
         }
 
     })
@@ -253,12 +249,10 @@ function fetchWeather (event) {
                 element.addEventListener("click", 
                     function(event) {
                         fetchWeather(event);
-                    })
-                )
-            }
-        
+                })
+            )
+        }   
     }
-
 }
 
 // Clear localStorage and Refresh Page
@@ -289,6 +283,7 @@ for (var i = 0; i < keys.length; i++) {
     newHistoryEl.setAttribute("id",  "btn-srch")
     historyParentEl.insertAdjacentElement("afterend", newHistoryEl)
 
+    // Refresh event listeners for new buttons
     searchButtons = document.querySelectorAll(".new-btn-srch")
     searchButtons.forEach(element =>
         element.addEventListener("click", 
