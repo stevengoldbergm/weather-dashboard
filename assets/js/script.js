@@ -151,13 +151,33 @@ function fetchWeather (event) {
                         todayChildEl[7].textContent = "UV Index: " + uvI
                         if (uvI < 3) {
                             todayChildEl[7].classList.add("uv-low")
+                            todayChildEl[7].classList.remove("uv-mod")
+                            todayChildEl[7].classList.remove("uv-high")
+                            todayChildEl[7].classList.remove("uv-vhigh")
+                            todayChildEl[7].classList.remove("uv-extr")
                         } else if (uvI < 6) {
+                            todayChildEl[7].classList.remove("uv-low")
                             todayChildEl[7].classList.add("uv-mod")
+                            todayChildEl[7].classList.remove("uv-high")
+                            todayChildEl[7].classList.remove("uv-vhigh")
+                            todayChildEl[7].classList.remove("uv-extr")                        
                         } else if (uvI < 8) {
+                            todayChildEl[7].classList.remove("uv-low")
+                            todayChildEl[7].classList.remove("uv-mod")
                             todayChildEl[7].classList.add("uv-high")
+                            todayChildEl[7].classList.remove("uv-vhigh")
+                            todayChildEl[7].classList.remove("uv-extr")  
                         } else if (uvI < 10) {
+                            todayChildEl[7].classList.remove("uv-low")
+                            todayChildEl[7].classList.remove("uv-mod")
+                            todayChildEl[7].classList.remove("uv-high")
                             todayChildEl[7].classList.add("uv-vhigh")
+                            todayChildEl[7].classList.remove("uv-extr")  
                         } else {
+                            todayChildEl[7].classList.remove("uv-low")
+                            todayChildEl[7].classList.remove("uv-mod")
+                            todayChildEl[7].classList.remove("uv-high")
+                            todayChildEl[7].classList.remove("uv-vhigh")
                             todayChildEl[7].classList.add("uv-extr")
                         }
                     })        
